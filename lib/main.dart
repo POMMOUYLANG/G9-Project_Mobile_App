@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_mobile_app/Pages/languagepage.dart';
+import 'package:project_mobile_app/Pages/otpscreen.dart';
 import 'package:project_mobile_app/Pages/welcomepage.dart';
 
 void main() {
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const WelcomePage(),
-        '/languagepage': (context) => const Languagepage()
+        '/languagepage': (context) => const Languagepage(),
+        '/otpscreen': (context) => const OTPScreen(),
       },
     );
   }

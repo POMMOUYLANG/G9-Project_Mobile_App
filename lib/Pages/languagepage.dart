@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_mobile_app/Pages/otpscreen.dart';
 
 class Languagepage extends StatefulWidget {
   const Languagepage({super.key});
@@ -42,7 +43,10 @@ class _LanguagepageState extends State<Languagepage> {
               padding: const EdgeInsets.only(top: 40), // Add top padding here
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle button press
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const OTPScreen()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   padding:
@@ -67,7 +71,10 @@ class _LanguagepageState extends State<Languagepage> {
               padding: const EdgeInsets.only(top: 10), // Add top padding here
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle button press
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const OTPScreen()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   padding:
