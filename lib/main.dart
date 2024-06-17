@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project_mobile_app/Pages/foodorder.dart';
 import 'package:project_mobile_app/Pages/languagepage.dart';
+import 'package:project_mobile_app/Pages/loginpage.dart';
 import 'package:project_mobile_app/Pages/otpscreen.dart';
 import 'package:project_mobile_app/Pages/welcomepage.dart';
 
@@ -26,6 +28,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => const WelcomePage(),
         '/languagepage': (context) => const Languagepage(),
         '/otpscreen': (context) => const OTPScreen(),
+        '/foodorder': (context) => const FoodDelivery(),
+        '/login': (context) => const LoginPage(),
       },
     );
   }

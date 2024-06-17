@@ -150,7 +150,9 @@ class _OTPScreenState extends State<OTPScreen> {
                           backgroundColor:
                               const Color.fromARGB(255, 10, 73, 189),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/foodorder');
+                        },
                         child: const Text(
                           'Submit',
                           style: TextStyle(
