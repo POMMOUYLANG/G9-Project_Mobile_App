@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_mobile_app/Pages/forgotpwpage.dart';
 import 'package:project_mobile_app/Pages/loginpage.dart';
 import 'package:project_mobile_app/Pages/otpscreen.dart';
 
@@ -74,7 +75,9 @@ class _LanguagepageState extends State<Languagepage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const OTPScreen()),
+                    // MaterialPageRoute(builder: (context) => const OTPScreen()),
+                    MaterialPageRoute(
+                        builder: (context) => const ForgotpwPage()),
                   );
                 },
                 style: ElevatedButton.styleFrom(

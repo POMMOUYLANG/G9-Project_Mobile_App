@@ -50,9 +50,12 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(10.0)), // Add rounded corners
                             borderSide: BorderSide(
-                                color: Color.fromARGB(255, 10, 73, 189),
-                                width: 2.0),
+                              color: Color.fromARGB(255, 10, 73, 189),
+                              width: 2.0,
+                            ),
                           ),
                           prefixIcon: Icon(Icons.phone, color: Colors.blue),
                         ),
@@ -74,9 +77,12 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(10.0)), // Add rounded corners
                             borderSide: BorderSide(
-                                color: Color.fromARGB(255, 10, 73, 189),
-                                width: 2.0),
+                              color: Color.fromARGB(255, 10, 73, 189),
+                              width: 2.0,
+                            ),
                           ),
                           prefixIcon: Icon(Icons.key, color: Colors.blue),
                         ),

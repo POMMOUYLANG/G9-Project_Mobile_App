@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_mobile_app/Pages/foodorder.dart';
+import 'package:project_mobile_app/Pages/forgotpwpage.dart';
 import 'package:project_mobile_app/Pages/languagepage.dart';
 import 'package:project_mobile_app/Pages/loginpage.dart';
 import 'package:project_mobile_app/Pages/otpscreen.dart';
@@ -27,9 +28,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const WelcomePage(),
         '/languagepage': (context) => const Languagepage(),
+        '/login': (context) => const LoginPage(),
+        '/forgotpw': (context) => const ForgotpwPage(),
         '/otpscreen': (context) => const OTPScreen(),
         '/foodorder': (context) => const FoodDelivery(),
-        '/login': (context) => const LoginPage(),
       },
     );
   }
