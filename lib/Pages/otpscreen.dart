@@ -19,7 +19,7 @@ class _OTPScreenState extends State<OTPScreen> {
           color: const Color.fromARGB(255, 7, 87, 152),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/forgotpw');
           },
         ),
       ),
@@ -151,7 +151,7 @@ class _OTPScreenState extends State<OTPScreen> {
                               const Color.fromARGB(255, 10, 73, 189),
                         ),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/foodorder');
+                          Navigator.pushNamed(context, '/resetpw');
                         },
                         child: const Text(
                           'Submit',

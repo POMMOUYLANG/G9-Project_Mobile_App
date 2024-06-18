@@ -4,6 +4,8 @@ import 'package:project_mobile_app/Pages/forgotpwpage.dart';
 import 'package:project_mobile_app/Pages/languagepage.dart';
 import 'package:project_mobile_app/Pages/loginpage.dart';
 import 'package:project_mobile_app/Pages/otpscreen.dart';
+import 'package:project_mobile_app/Pages/registerpage.dart';
+import 'package:project_mobile_app/Pages/resetpwpage.dart';
 import 'package:project_mobile_app/Pages/welcomepage.dart';
 
 void main() {
@@ -29,8 +31,10 @@ class MyApp extends StatelessWidget {
         '/': (context) => const WelcomePage(),
         '/languagepage': (context) => const Languagepage(),
         '/login': (context) => const LoginPage(),
+        '/register': (context) => const RegisterPage(),
         '/forgotpw': (context) => const ForgotpwPage(),
         '/otpscreen': (context) => const OTPScreen(),
+        '/resetpw': (context) => const ResetpwPage(),
         '/foodorder': (context) => const FoodDelivery(),
       },
     );

@@ -1,15 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,22 +19,21 @@ class _LoginPageState extends State<LoginPage> {
           color: const Color.fromARGB(255, 7, 87, 152),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/languagepage');
+            Navigator.pushNamed(context, '/login');
           },
         ),
       ),
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
-              // Padding(padding: EdgeInsets.only(top: 100)),
               Image(
                 image: AssetImage('images/logo/kroya02.png'),
                 width: 200,
                 height: 200,
               ),
               Text(
-                'Sign in',
+                'Sing up',
                 style: TextStyle(
                     fontSize: 25,
                     color: Color.fromARGB(255, 10, 73, 189),
@@ -48,6 +45,33 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     Container(
                       padding: const EdgeInsets.only(top: 30),
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          labelText: 'Name........',
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 10, 73, 189),
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 10, 73, 189),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(10.0)), // Add rounded corners
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 10, 73, 189),
+                              width: 2.0,
+                            ),
+                          ),
+                          prefixIcon: Icon(Icons.person, color: Colors.blue),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(top: 20),
                       child: const TextField(
                         decoration: InputDecoration(
                           labelText: 'Phone Number........',
@@ -96,65 +120,35 @@ class _LoginPageState extends State<LoginPage> {
                               width: 2.0,
                             ),
                           ),
-                          prefixIcon: Icon(Icons.key, color: Colors.blue),
+                          prefixIcon: Icon(Icons.lock, color: Colors.blue),
                         ),
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Row(
-                        children: [
-                          Text(
-                            "Forgot password?",
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 10, 73, 189),
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                height: 80,
-                width: 300,
-                padding: const EdgeInsets.all(10),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 10, 73, 189),
-                  ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/register');
-                  },
-                  child: const Text(
-                    'Login',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(20),
-                child: Row(
-                  children: [
-                    Text(
-                      'Do you have account?',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                    Text(
-                      'Create account',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 10, 73, 189),
-                        fontWeight: FontWeight.bold,
+                      height: 80,
+                      width: 300,
+                      margin: EdgeInsets.only(top: 40),
+                      padding: const EdgeInsets.all(10),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                              const Color.fromARGB(255, 10, 73, 189),
+                        ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/register');
+                        },
+                        child: const Text(
+                          'Create new account',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
                       ),
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

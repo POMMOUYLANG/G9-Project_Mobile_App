@@ -100,10 +100,10 @@ class _ForgotpwPageState extends State<ForgotpwPage> {
                     backgroundColor: const Color.fromARGB(255, 10, 73, 189),
                   ),
                   onPressed: () {
-                    
+                    Navigator.pushNamed(context, '/otpscreen');
                   },
                   child: const Text(
-                    'Login',
+                    'Send',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
