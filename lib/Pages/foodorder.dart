@@ -19,7 +19,7 @@ class _FoodDeliveryState extends State<FoodDelivery> {
           color: const Color.fromARGB(255, 7, 87, 152),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/khmerfood');
           },
         ),
         title: const Text(
@@ -102,12 +102,20 @@ class _FoodDeliveryState extends State<FoodDelivery> {
                       SizedBox(width: 16), // Space between the two boxes
                       CustomBox(
                         color: Color.fromARGB(255, 253, 254, 255),
-                        child: Image(image: AssetImage('images/koi.jpg')),
+                        child: Image(
+                          image: AssetImage('images/koi.jpg'),
+                          width: 200,
+                          height: 120,
+                        ),
                       ),
                       SizedBox(width: 16), // Space between the two boxes
                       CustomBox(
                         color: Color.fromARGB(255, 253, 254, 255),
-                        child: Image(image: AssetImage('images/koi.jpg')),
+                        child: Image(
+                          image: AssetImage('images/koi.jpg'),
+                          width: 200,
+                          height: 120,
+                        ),
                       ),
                     ],
                   ),
@@ -131,30 +139,42 @@ class _FoodDeliveryState extends State<FoodDelivery> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(4),
+              margin: EdgeInsets.all(10),
               padding: EdgeInsets.all(10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  MiniBox(
-                    color: Color.fromARGB(255, 253, 254, 255),
-                    child: Image(
-                      image: AssetImage('images/kfc.png'),
+              child: SingleChildScrollView(
+                scrollDirection:
+                    Axis.horizontal, // Set the scroll direction to horizontal
+                child: Row(
+                  children: [
+                    MiniBox(
+                      color: Color.fromARGB(255, 253, 254, 255),
+                      child: Image(
+                        image: AssetImage('images/kfc.png'),
+                      ),
                     ),
-                  ),
-                  MiniBox(
-                    color: Color.fromARGB(255, 253, 254, 255),
-                    child: Image(
-                      image: AssetImage('images/pizza.png'),
+                    SizedBox(width: 10), // Gap between boxes
+                    MiniBox(
+                      color: Color.fromARGB(255, 253, 254, 255),
+                      child: Image(
+                        image: AssetImage('images/pizza.png'),
+                      ),
                     ),
-                  ),
-                  MiniBox(
-                    color: Color.fromARGB(255, 253, 254, 255),
-                    child: Image(
-                      image: AssetImage('images/tubecoffee.png'),
+                    SizedBox(width: 10), // Gap between boxes
+                    MiniBox(
+                      color: Color.fromARGB(255, 253, 254, 255),
+                      child: Image(
+                        image: AssetImage('images/tubecoffee.png'),
+                      ),
                     ),
-                  ),
-                ],
+                    SizedBox(width: 10), // Gap between boxes
+                    MiniBox(
+                      color: Color.fromARGB(255, 253, 254, 255),
+                      child: Image(
+                        image: AssetImage('images/tubecoffee.png'),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Container(
@@ -181,27 +201,43 @@ class _FoodDeliveryState extends State<FoodDelivery> {
                 children: [
                   XLBox(
                     color: Color.fromARGB(255, 253, 254, 255),
-                    child: Image(
-                      image: AssetImage('images/pizzacomany.jpg'),
-                      width: 300,
-                      height: 300,
-                      fit: BoxFit.cover,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(
+                          20), // Adjust the radius as needed
+                      child: Image(
+                        image: AssetImage('images/pizzacomany.jpg'),
+                        width: 350,
+                        height: 350,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   SizedBox(height: 16), // Space between the boxes
                   XLBox(
-                    color: Color(0xff7c94b6),
-                    child: Text(
-                      'Box 2',
-                      style: TextStyle(color: Colors.white),
+                    color: Color.fromARGB(255, 253, 254, 255),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(
+                          20), // Adjust the radius as needed
+                      child: Image(
+                        image: AssetImage('images/pizzacomany.jpg'),
+                        width: 350,
+                        height: 350,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   SizedBox(height: 16), // Space between the boxes
                   XLBox(
-                    color: Color(0xff7c94b6),
-                    child: Text(
-                      'Box 3',
-                      style: TextStyle(color: Colors.white),
+                    color: Color.fromARGB(255, 253, 254, 255),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(
+                          20), // Adjust the radius as needed
+                      child: Image(
+                        image: AssetImage('images/pizzacomany.jpg'),
+                        width: 350,
+                        height: 350,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ],
@@ -238,7 +274,7 @@ class CustomBox extends StatelessWidget {
       decoration: BoxDecoration(
         color: color,
         border: Border.all(
-          width: 0,
+          width: 1,
         ),
         borderRadius: BorderRadius.circular(12),
       ),

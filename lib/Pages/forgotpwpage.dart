@@ -92,6 +92,7 @@ class _ForgotpwPageState extends State<ForgotpwPage> {
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(top: 20),
                 height: 80,
                 width: 300,
                 padding: const EdgeInsets.only(top: 30),

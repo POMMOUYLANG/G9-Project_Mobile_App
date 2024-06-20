@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_mobile_app/Pages/khmerfood.dart';
 import 'package:project_mobile_app/Pages/foodorder.dart';
 import 'package:project_mobile_app/Pages/forgotpwpage.dart';
 import 'package:project_mobile_app/Pages/languagepage.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/otpscreen': (context) => const OTPScreen(),
         '/resetpw': (context) => const ResetpwPage(),
         '/foodorder': (context) => const FoodDelivery(),
+        '/khmerfood': (context) => const KhmerFood(),
       },
     );
   }
