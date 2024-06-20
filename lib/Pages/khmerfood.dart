@@ -19,7 +19,7 @@ class _KhmerFoodState extends State<KhmerFood> {
           color: const Color.fromARGB(255, 7, 87, 152),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/foodmenu');
           },
         ),
         title: const Text(
