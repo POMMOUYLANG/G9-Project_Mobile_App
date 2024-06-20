@@ -12,10 +12,11 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 10, 73, 189),
-      body: SafeArea(
+      backgroundColor: const Color(0xFF0041C7),
+      body: Container(
+        margin: EdgeInsets.only(top: 200),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             GestureDetector(
               onTap: () {

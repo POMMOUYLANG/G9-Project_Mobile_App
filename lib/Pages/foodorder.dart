@@ -16,7 +16,7 @@ class _FoodDeliveryState extends State<FoodDelivery> {
         backgroundColor: const Color(0xFFFFFFFF),
         leading: IconButton(
           icon: const Icon(Icons.menu),
-          color: const Color.fromARGB(255, 7, 87, 152),
+          color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
             Navigator.pushNamed(context, '/khmerfood');
@@ -25,7 +25,7 @@ class _FoodDeliveryState extends State<FoodDelivery> {
         title: const Text(
           'KROYA',
           style: TextStyle(
-            color: Color.fromARGB(255, 10, 110, 192),
+            color: Color(0xFF0041C7),
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -35,7 +35,7 @@ class _FoodDeliveryState extends State<FoodDelivery> {
               IconButton(
                 icon: const Icon(
                   Icons.search,
-                  color: Color.fromARGB(255, 7, 87, 152),
+                  color: Color(0xFF0041C7),
                 ),
                 iconSize: 40,
                 onPressed: () {
@@ -45,7 +45,7 @@ class _FoodDeliveryState extends State<FoodDelivery> {
               IconButton(
                 icon: const Icon(
                   Icons.notifications,
-                  color: Color.fromARGB(255, 7, 87, 152),
+                  color: Color(0xFF0041C7),
                 ),
                 iconSize: 40,
                 onPressed: () {
@@ -66,7 +66,7 @@ class _FoodDeliveryState extends State<FoodDelivery> {
                   'Enjoy with your meal!',
                   style: TextStyle(
                       fontSize: 22,
-                      color: Color.fromARGB(255, 7, 87, 152),
+                      color: Color(0xFF0041C7),
                       fontWeight: FontWeight.w700),
                 ),
               ],

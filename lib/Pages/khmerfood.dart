@@ -16,7 +16,7 @@ class _KhmerFoodState extends State<KhmerFood> {
         backgroundColor: const Color(0xFFFFFFFF),
         leading: IconButton(
           icon: const Icon(Icons.menu),
-          color: const Color.fromARGB(255, 7, 87, 152),
+          color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
             Navigator.pushNamed(context, '/foodmenu');
@@ -25,7 +25,7 @@ class _KhmerFoodState extends State<KhmerFood> {
         title: const Text(
           'KROYA',
           style: TextStyle(
-            color: Color.fromARGB(255, 10, 110, 192),
+            color: Color(0xFF0041C7),
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -35,7 +35,7 @@ class _KhmerFoodState extends State<KhmerFood> {
               IconButton(
                 icon: const Icon(
                   Icons.search,
-                  color: Color.fromARGB(255, 7, 87, 152),
+                  color: Color(0xFF0041C7),
                 ),
                 iconSize: 40,
                 onPressed: () {
@@ -45,7 +45,7 @@ class _KhmerFoodState extends State<KhmerFood> {
               IconButton(
                 icon: const Icon(
                   Icons.notifications,
-                  color: Color.fromARGB(255, 7, 87, 152),
+                  color: Color(0xFF0041C7),
                 ),
                 iconSize: 40,
                 onPressed: () {
@@ -71,7 +71,7 @@ class _KhmerFoodState extends State<KhmerFood> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
-                          color: Colors.blue,
+                          color: Color(0xFF0041C7),
                           width: 2,
                         ),
                         boxShadow: [
@@ -86,7 +86,7 @@ class _KhmerFoodState extends State<KhmerFood> {
                       child: Text(
                         'KHMER SALAD',
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Color(0xFF0041C7),
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
@@ -207,7 +207,7 @@ class FoodCard extends StatelessWidget {
       width: 150,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Colors.blueAccent,
+        color: Color(0xFF0041C7),
       ),
       child: Column(
         children: [

@@ -16,7 +16,7 @@ class _ResetpwPageState extends State<ResetpwPage> {
         backgroundColor: const Color(0xFFFFFFFF),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          color: const Color.fromARGB(255, 7, 87, 152),
+          color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
             Navigator.pushNamed(context, '/otpscreen');
@@ -43,7 +43,7 @@ class _ResetpwPageState extends State<ResetpwPage> {
                     style: TextStyle(
                         fontSize: 23,
                         fontWeight: FontWeight.w700,
-                        color: Color.fromARGB(255, 7, 87, 152),
+                        color: Color(0xFF0041C7),
                         height: 2),
                   )
                 ],
@@ -56,23 +56,26 @@ class _ResetpwPageState extends State<ResetpwPage> {
                   labelText: 'Password........',
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(255, 10, 73, 189),
+                      color: Color(0xFF0041C7),
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(255, 10, 73, 189),
+                      color: Color(0xFF0041C7),
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                         Radius.circular(10.0)), // Add rounded corners
                     borderSide: BorderSide(
-                      color: Color.fromARGB(255, 10, 73, 189),
+                      color: Color(0xFF0041C7),
                       width: 2.0,
                     ),
                   ),
-                  prefixIcon: Icon(Icons.lock, color: Colors.blue),
+                  prefixIcon: Icon(
+                    Icons.lock,
+                    color: Color(0xFF0041C7),
+                  ),
                 ),
               ),
             ),
@@ -83,23 +86,26 @@ class _ResetpwPageState extends State<ResetpwPage> {
                   labelText: 'Confirm Password........',
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(255, 10, 73, 189),
+                      color: Color(0xFF0041C7),
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromARGB(255, 10, 73, 189),
+                      color: Color(0xFF0041C7),
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                         Radius.circular(10.0)), // Add rounded corners
                     borderSide: BorderSide(
-                      color: Color.fromARGB(255, 10, 73, 189),
+                      color: Color(0xFF0041C7),
                       width: 2.0,
                     ),
                   ),
-                  prefixIcon: Icon(Icons.lock, color: Colors.blue),
+                  prefixIcon: Icon(
+                    Icons.lock,
+                    color: Color(0xFF0041C7),
+                  ),
                 ),
               ),
             ),
@@ -110,7 +116,7 @@ class _ResetpwPageState extends State<ResetpwPage> {
               padding: const EdgeInsets.only(top: 30),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 10, 73, 189),
+                  backgroundColor: const Color(0xFF0041C7),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/foodorder');

@@ -16,7 +16,7 @@ class _OTPScreenState extends State<OTPScreen> {
         backgroundColor: const Color(0xFFFFFFFF),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          color: const Color.fromARGB(255, 7, 87, 152),
+          color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
             Navigator.pushNamed(context, '/forgotpw');
@@ -40,9 +40,7 @@ class _OTPScreenState extends State<OTPScreen> {
                   Text(
                     'Verification Code ',
                     style: TextStyle(
-                        fontSize: 23,
-                        color: Color.fromARGB(255, 7, 87, 152),
-                        height: 2),
+                        fontSize: 23, color: Color(0xFF0041C7), height: 2),
                   )
                 ],
               ),
@@ -69,7 +67,8 @@ class _OTPScreenState extends State<OTPScreen> {
                       decoration: BoxDecoration(
                         color: Colors.black12,
                         border: Border.all(
-                            color: Colors.blue), // Border color and width
+                          color: Color(0xFF0041C7),
+                        ), // Border color and width
                         borderRadius:
                             BorderRadius.circular(10), // Rounded corners
                       ),
@@ -81,7 +80,8 @@ class _OTPScreenState extends State<OTPScreen> {
                       decoration: BoxDecoration(
                         color: Colors.black12,
                         border: Border.all(
-                            color: Colors.blue), // Border color and width
+                          color: Color(0xFF0041C7),
+                        ), // Border color and width
                         borderRadius:
                             BorderRadius.circular(10), // Rounded corners
                       ),
@@ -93,7 +93,8 @@ class _OTPScreenState extends State<OTPScreen> {
                       decoration: BoxDecoration(
                         color: Colors.black12,
                         border: Border.all(
-                            color: Colors.blue), // Border color and width
+                          color: Color(0xFF0041C7),
+                        ), // Border color and width
                         borderRadius:
                             BorderRadius.circular(10), // Rounded corners
                       ),
@@ -105,7 +106,8 @@ class _OTPScreenState extends State<OTPScreen> {
                       decoration: BoxDecoration(
                         color: Colors.black12,
                         border: Border.all(
-                            color: Colors.blue), // Border color and width
+                          color: Color(0xFF0041C7),
+                        ), // Border color and width
                         borderRadius:
                             BorderRadius.circular(10), // Rounded corners
                       ),
@@ -117,7 +119,8 @@ class _OTPScreenState extends State<OTPScreen> {
                       decoration: BoxDecoration(
                         color: Colors.black12,
                         border: Border.all(
-                            color: Colors.blue), // Border color and width
+                          color: Color(0xFF0041C7),
+                        ), // Border color and width
                         borderRadius:
                             BorderRadius.circular(10), // Rounded corners
                       ),
@@ -129,7 +132,8 @@ class _OTPScreenState extends State<OTPScreen> {
                       decoration: BoxDecoration(
                         color: Colors.black12,
                         border: Border.all(
-                            color: Colors.blue), // Border color and width
+                          color: Color(0xFF0041C7),
+                        ), // Border color and width
                         borderRadius:
                             BorderRadius.circular(10), // Rounded corners
                       ),
@@ -147,8 +151,7 @@ class _OTPScreenState extends State<OTPScreen> {
                       padding: const EdgeInsets.all(10),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color.fromARGB(255, 10, 73, 189),
+                          backgroundColor: const Color(0xFF0041C7),
                         ),
                         onPressed: () {
                           Navigator.pushNamed(context, '/resetpw');
