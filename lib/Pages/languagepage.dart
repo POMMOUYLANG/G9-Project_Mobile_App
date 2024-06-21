@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_mobile_app/Views/forgotpwpage.dart';
 import 'package:project_mobile_app/Views/loginpage.dart';
-import 'package:project_mobile_app/Views/otpscreen.dart';
 
 class Languagepage extends StatefulWidget {
   const Languagepage({super.key});

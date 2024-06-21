@@ -19,7 +19,7 @@ class _FoodMenuState extends State<FoodMenu> {
           color: Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/khmerfood');
+            Navigator.pushNamed(context, '/foodoption');
           },
         ),
         title: const Text(
@@ -79,9 +79,27 @@ class _FoodMenuState extends State<FoodMenu> {
                   ),
                 ),
               ),
-              MenuButton(label: 'KHMER SOUP'),
-              MenuButton(label: 'FRIED'),
-              MenuButton(label: 'KHMER SALAD'),
+              // MenuButton(label: 'KHMER SOUP'),
+              // MenuButton(label: 'FRIED'),
+
+              MenuButton(
+                label: 'KHMER SOUP',
+                onTap: () {
+                  Navigator.pushNamed(context, '/khmerfood');
+                },
+              ),
+              MenuButton(
+                label: 'FRIED',
+                onTap: () {
+                  Navigator.pushNamed(context, '/khmerfood');
+                },
+              ),
+              MenuButton(
+                label: 'KHMER SALAD',
+                onTap: () {
+                  Navigator.pushNamed(context, '/khmerfood');
+                },
+              ),
               MenuCard(
                 imagePath: 'images/pic1.jpg', // replace with your image path
                 chefName: 'Chef Nak',
@@ -155,8 +173,9 @@ class MenuCard extends StatelessWidget {
 
 class MenuButton extends StatelessWidget {
   final String label;
+  final VoidCallback onTap;
 
-  const MenuButton({super.key, required this.label});
+  const MenuButton({super.key, required this.label, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -172,7 +191,7 @@ class MenuButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(30),
           ),
         ),
-        onPressed: () {},
+        onPressed: onTap,
         child: Text(
           label,
           style: TextStyle(
