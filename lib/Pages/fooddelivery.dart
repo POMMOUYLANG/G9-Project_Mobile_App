@@ -56,9 +56,7 @@ class _FoodDeliveryState extends State<FoodDelivery> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        
-      ),
+      body: SingleChildScrollView(),
     );
   }
 }
