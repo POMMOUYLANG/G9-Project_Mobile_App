@@ -135,7 +135,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               const Color.fromARGB(255, 10, 73, 189),
                         ),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/register');
+                          Navigator.pushNamed(context, '/foodoption');
                         },
                         child: const Text(
                           'Create new account',

@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: const Color(0xFFFFFFFF),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          color: const Color.fromARGB(255, 7, 87, 152),
+          color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
             Navigator.pushNamed(context, '/languagepage');
@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
                 'Sign in',
                 style: TextStyle(
                     fontSize: 25,
-                    color: Color.fromARGB(255, 10, 73, 189),
+                    color: Color(0xFF0041C7),
                     fontWeight: FontWeight.w700),
               ),
               Container(
@@ -53,19 +53,19 @@ class _LoginPageState extends State<LoginPage> {
                           labelText: 'Phone Number........',
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(
                                 Radius.circular(10.0)), // Add rounded corners
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                               width: 2.0,
                             ),
                           ),
@@ -80,19 +80,19 @@ class _LoginPageState extends State<LoginPage> {
                           labelText: 'Password........',
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(
                                 Radius.circular(10.0)), // Add rounded corners
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                               width: 2.0,
                             ),
                           ),
@@ -104,13 +104,19 @@ class _LoginPageState extends State<LoginPage> {
                       padding: const EdgeInsets.only(top: 10),
                       child: Row(
                         children: [
-                          Text(
-                            "Forgot password?",
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 10, 73, 189),
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/forgotpw');
+                            },
+                            child: Text(
+                              "Forgot password?",
+                              style: TextStyle(
+                                color: Color(0xFF0041C7),
                                 fontSize: 18,
-                                fontWeight: FontWeight.w700),
-                          )
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     )
@@ -126,7 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                     backgroundColor: const Color.fromARGB(255, 10, 73, 189),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/register');
+                    Navigator.pushNamed(context, '/foodoption');
                   },
                   child: const Text(
                     'Login',
@@ -142,14 +148,19 @@ class _LoginPageState extends State<LoginPage> {
                 child: Row(
                   children: [
                     Text(
-                      'Do you have account?',
+                      'Do you have an account?',
                       style: TextStyle(color: Colors.grey),
                     ),
-                    Text(
-                      'Create account',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 10, 73, 189),
-                        fontWeight: FontWeight.bold,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/register');
+                      },
+                      child: Text(
+                        ' Create account',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 10, 73, 189),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],

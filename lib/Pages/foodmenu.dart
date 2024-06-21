@@ -19,7 +19,7 @@ class _FoodMenuState extends State<FoodMenu> {
           color: Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/khmerfood');
           },
         ),
         title: const Text(

@@ -119,7 +119,7 @@ class _ResetpwPageState extends State<ResetpwPage> {
                   backgroundColor: const Color(0xFF0041C7),
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/foodorder');
+                  Navigator.pushNamed(context, '/login');
                 },
                 child: const Text(
                   'Save',

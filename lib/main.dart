@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:project_mobile_app/Pages/foodmenu.dart';
+import 'package:project_mobile_app/Pages/foodoption.dart';
 import 'package:project_mobile_app/Pages/khmerfood.dart';
 import 'package:project_mobile_app/Pages/foodorder.dart';
-import 'package:project_mobile_app/Pages/forgotpwpage.dart';
+import 'package:project_mobile_app/Views/forgotpwpage.dart';
 import 'package:project_mobile_app/Pages/languagepage.dart';
-import 'package:project_mobile_app/Pages/loginpage.dart';
-import 'package:project_mobile_app/Pages/otpscreen.dart';
-import 'package:project_mobile_app/Pages/registerpage.dart';
-import 'package:project_mobile_app/Pages/resetpwpage.dart';
+import 'package:project_mobile_app/Views/loginpage.dart';
+import 'package:project_mobile_app/Views/otpscreen.dart';
+import 'package:project_mobile_app/Views/registerpage.dart';
+import 'package:project_mobile_app/Views/resetpwpage.dart';
 import 'package:project_mobile_app/Pages/welcomepage.dart';
 
 void main() {
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/foodorder': (context) => const FoodDelivery(),
         '/khmerfood': (context) => const KhmerFood(),
         '/foodmenu': (context) => const FoodMenu(),
+        '/foodoption': (context) => const FoodOption(),
       
       },
     );

@@ -19,7 +19,7 @@ class _FoodDeliveryState extends State<FoodDelivery> {
           color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/khmerfood');
+            Navigator.pushNamed(context, '/foodorder');
           },
         ),
         title: const Text(
