@@ -22,8 +22,11 @@ class _WelcomePageState extends State<WelcomePage> {
               onTap: () {
                 Navigator.pushNamed(context, '/languagepage');
               },
-              child: const Image(
-                image: AssetImage('images/logo/kroya.png'),
+              child: Center (
+                child: const Image(
+                    height: 350,
+                    image: AssetImage('images/logo/kroya.png',)
+                ),
               ),
             ),
           ],

@@ -16,7 +16,7 @@ class _RegisterPageState extends State<RegisterPage> {
         backgroundColor: const Color(0xFFFFFFFF),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          color: const Color.fromARGB(255, 7, 87, 152),
+          color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
             Navigator.pushNamed(context, '/login');
@@ -36,7 +36,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 'Sing up',
                 style: TextStyle(
                     fontSize: 25,
-                    color: Color.fromARGB(255, 10, 73, 189),
+                    color: Color(0xFF0041C7),
                     fontWeight: FontWeight.w700),
               ),
               Container(
@@ -50,23 +50,23 @@ class _RegisterPageState extends State<RegisterPage> {
                           labelText: 'Name........',
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(
                                 Radius.circular(10.0)), // Add rounded corners
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                               width: 2.0,
                             ),
                           ),
-                          prefixIcon: Icon(Icons.person, color: Colors.blue),
+                          prefixIcon: Icon(Icons.person, color: Color(0xFF0041C7)),
                         ),
                       ),
                     ),
@@ -77,23 +77,23 @@ class _RegisterPageState extends State<RegisterPage> {
                           labelText: 'Phone Number........',
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(
                                 Radius.circular(10.0)), // Add rounded corners
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                               width: 2.0,
                             ),
                           ),
-                          prefixIcon: Icon(Icons.phone, color: Colors.blue),
+                          prefixIcon: Icon(Icons.phone, color: Color(0xFF0041C7)),
                         ),
                       ),
                     ),
@@ -104,23 +104,23 @@ class _RegisterPageState extends State<RegisterPage> {
                           labelText: 'Password........',
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(
                                 Radius.circular(10.0)), // Add rounded corners
                             borderSide: BorderSide(
-                              color: Color.fromARGB(255, 10, 73, 189),
+                              color: Color(0xFF0041C7),
                               width: 2.0,
                             ),
                           ),
-                          prefixIcon: Icon(Icons.lock, color: Colors.blue),
+                          prefixIcon: Icon(Icons.lock, color: Color(0xFF0041C7)),
                         ),
                       ),
                     ),
@@ -132,7 +132,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor:
-                              const Color.fromARGB(255, 10, 73, 189),
+                              const Color(0xFF0041C7),
                         ),
                         onPressed: () {
                           Navigator.pushNamed(context, '/foodoption');

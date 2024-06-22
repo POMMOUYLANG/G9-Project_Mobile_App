@@ -19,7 +19,7 @@ class _FoodOptionState extends State<FoodOption> {
           color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/login');
+            Navigator.pushNamed(context, '/foodmenu');
           },
         ),
         title: const Text(
@@ -109,7 +109,7 @@ class _FoodOptionState extends State<FoodOption> {
                             child: Column(
                               children: [
                                 Text(
-                                  "Khmer Food",
+                                  "Food Menu",
                                   style: TextStyle(
                                       fontSize: 30,
                                       color: Color(0xFF0041C7),
@@ -158,7 +158,7 @@ class _FoodOptionState extends State<FoodOption> {
                             child: Column(
                               children: [
                                 Text(
-                                  "Food Social",
+                                  "Khmer Food",
                                   style: TextStyle(
                                       fontSize: 30,
                                       color: Color(0xFF0041C7),
@@ -204,7 +204,7 @@ class _FoodOptionState extends State<FoodOption> {
                                       InkWell(
                                         onTap: () {
                                           Navigator.pushNamed(
-                                              context, '/foodorder');
+                                              context, '/khmerfood');
                                         },
                                         child: Image(
                                           image:
@@ -250,7 +250,7 @@ class _FoodOptionState extends State<FoodOption> {
                                       InkWell(
                                         onTap: () {
                                           Navigator.pushNamed(
-                                              context, '/fooddelivery');
+                                              context, '/foodorder');
                                         },
                                         child: Image(
                                           image:

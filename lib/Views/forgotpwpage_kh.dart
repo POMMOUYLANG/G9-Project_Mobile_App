@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ForgotpwPage extends StatefulWidget {
-  const ForgotpwPage({super.key});
+class KhForgotpwPage extends StatefulWidget {
+  const KhForgotpwPage({super.key});
 
   @override
-  State<ForgotpwPage> createState() => _ForgotpwPageState();
+  State<KhForgotpwPage> createState() => _KhForgotpwPageState();
 }
 
-class _ForgotpwPageState extends State<ForgotpwPage> {
+class _KhForgotpwPageState extends State<KhForgotpwPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,10 +36,10 @@ class _ForgotpwPageState extends State<ForgotpwPage> {
                       height: 120,
                     ),
                     Text(
-                      'Forgot password ',
+                      'ភ្លេចពាក្យសម្ងាត់',
                       style: TextStyle(
                           fontSize: 23,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.bold,
                           color: Color(0xFF0041C7),
                           height: 2),
                     )
@@ -52,10 +52,10 @@ class _ForgotpwPageState extends State<ForgotpwPage> {
                   child: Column(
                     children: [
                       Text(
-                        "Please enter phone number to get verification",
+                        "សូមបញ្ចូលលេខទូរស័ព្ទ ដើម្បីទទួលបានលេខកូដOTP",
                         style: TextStyle(),
                       ),
-                      Text("OTP code for new password!")
+                      Text("ក្នុងការបង្កើតលេខសម្ងាត់ថ្មី!")
                     ],
                   ),
                 ),
@@ -64,7 +64,7 @@ class _ForgotpwPageState extends State<ForgotpwPage> {
                 padding: const EdgeInsets.only(top: 30),
                 child: const TextField(
                   decoration: InputDecoration(
-                    labelText: 'Phone Number........',
+                    labelText: 'លេខទូរស័ព្ទ.....',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(
                           Radius.circular(10.0)), // Add rounded corners
@@ -101,10 +101,10 @@ class _ForgotpwPageState extends State<ForgotpwPage> {
                     backgroundColor: const Color(0xFF0041C7),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/otpscreen');
+                    Navigator.pushNamed(context, '/otpscreen_kh');
                   },
                   child: const Text(
-                    'Send',
+                    'បញ្ជូនលេខកូដ',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -117,4 +117,4 @@ class _ForgotpwPageState extends State<ForgotpwPage> {
         ));
   }
 }
-// 
+//

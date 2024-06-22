@@ -1,15 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class KhRegisterPage extends StatefulWidget {
+  const KhRegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<KhRegisterPage> createState() => _KhRegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _KhRegisterPageState extends State<KhRegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,26 +19,25 @@ class _LoginPageState extends State<LoginPage> {
           color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/languagepage');
+            Navigator.pushNamed(context, '/login');
           },
         ),
       ),
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
-              // Padding(padding: EdgeInsets.only(top: 100)),
               Image(
                 image: AssetImage('images/logo/kroya02.png'),
                 width: 200,
                 height: 200,
               ),
               Text(
-                'Sign in',
+                'បង្កើតគណនី',
                 style: TextStyle(
                     fontSize: 25,
                     color: Color(0xFF0041C7),
-                    fontWeight: FontWeight.w700),
+                    fontWeight: FontWeight.bold),
               ),
               Container(
                 padding: const EdgeInsets.all(25),
@@ -50,7 +47,34 @@ class _LoginPageState extends State<LoginPage> {
                       padding: const EdgeInsets.only(top: 30),
                       child: const TextField(
                         decoration: InputDecoration(
-                          labelText: 'Phone Number........',
+                          labelText: 'ឈ្មោះ.....',
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0xFF0041C7),
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0xFF0041C7),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(10.0)), // Add rounded corners
+                            borderSide: BorderSide(
+                              color: Color(0xFF0041C7),
+                              width: 2.0,
+                            ),
+                          ),
+                          prefixIcon: Icon(Icons.person, color: Color(0xFF0041C7)),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          labelText: 'លេខទូរស័ព្ទ.....',
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0xFF0041C7),
@@ -77,15 +101,15 @@ class _LoginPageState extends State<LoginPage> {
                       padding: const EdgeInsets.only(top: 20),
                       child: const TextField(
                         decoration: InputDecoration(
-                          labelText: 'Password........',
+                          labelText: 'លេខសម្ងាត់.....',
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF0041C7),
+                              color: Color.fromARGB(255, 10, 73, 189),
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF0041C7),
+                              color: Color.fromARGB(255, 10, 73, 189),
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
@@ -96,76 +120,35 @@ class _LoginPageState extends State<LoginPage> {
                               width: 2.0,
                             ),
                           ),
-                          prefixIcon: Icon(Icons.key, color: Color(0xFF0041C7)),
+                          prefixIcon: Icon(Icons.lock, color: Color(0xFF0041C7)),
                         ),
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Row(
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              Navigator.pushNamed(context, '/forgotpw');
-                            },
-                            child: Text(
-                              "Forgot password?",
-                              style: TextStyle(
-                                color: Color(0xFF0041C7),
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
+                      height: 80,
+                      width: 300,
+                      margin: EdgeInsets.only(top: 40),
+                      padding: const EdgeInsets.all(10),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                          const Color.fromARGB(255, 10, 73, 189),
+                        ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/foodoption_kh');
+                        },
+                        child: const Text(
+                          'បង្កើតគណនី',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
                           ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                height: 80,
-                width: 300,
-                padding: const EdgeInsets.all(10),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF0041C7),
-                  ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/foodoption');
-                  },
-                  child: const Text(
-                    'Login',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(20),
-                child: Row(
-                  children: [
-                    Text(
-                      'Do you have an account?',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/register');
-                      },
-                      child: Text(
-                        ' Create account',
-                        style: TextStyle(
-                          color: Color(0xFF0041C7),
-                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

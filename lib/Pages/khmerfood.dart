@@ -19,7 +19,7 @@ class _KhmerFoodState extends State<KhmerFood> {
           color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/foodmenu');
+            Navigator.pushNamed(context, '/foodorder');
           },
         ),
         title: const Text(
@@ -56,140 +56,141 @@ class _KhmerFoodState extends State<KhmerFood> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Container(
-            child: Column(
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(20),
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 100, vertical: 10),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: Color(0xFF0041C7),
-                          width: 2,
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 2,
-                            blurRadius: 5,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ],
-                      ),
-                      child: Text(
-                        'KHMER SALAD',
-                        style: TextStyle(
-                          color: Color(0xFF0041C7),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          FoodCard(
-                            imagePath:
-                                'images/food1.jpg', // replace with your image path
-                            label: 'នំបញ្ចុកសម្លប្រហុក',
-                          ),
-                          FoodCard(
-                            imagePath:
-                                'images/food2.jpg', // replace with your image path
-                            label: 'ញ៉ាំស្កៃ',
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          FoodCard(
-                            imagePath:
-                                'images/food3.jpg', // replace with your image path
-                            label: 'អាម៉ុកត្រី',
-                          ),
-                          FoodCard(
-                            imagePath:
-                                'images/food4.jpg', // replace with your image path
-                            label: 'ត្រីអាំងទឹកត្រីស្វាយ',
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          FoodCard(
-                            imagePath:
-                                'images/food5.jpg', // replace with your image path
-                            label: 'នំបញ្ចុកទឹកត្រីផ្អែម',
-                          ),
-                          FoodCard(
-                            imagePath:
-                                'images/food6.jpg', // replace with your image path
-                            label: 'នំបញ្ចុកសម្លរខ្មែរ',
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 20),
-                  padding: EdgeInsets.only(bottom: 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          FoodCard(
-                            imagePath:
-                                'images/food1.jpg', // replace with your image path
-                            label: 'នំបញ្ចុកសម្លប្រហុក',
-                          ),
-                          FoodCard(
-                            imagePath:
-                                'images/food2.jpg', // replace with your image path
-                            label: 'ញ៉ាំស្កៃ',
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                )
-              ],
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              'images/background.jpg', // Replace with your background image path
+              fit: BoxFit.cover,
             ),
           ),
-        ),
+          SingleChildScrollView(
+            child: Center(
+              child: Container(
+                child: Column(
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.all(20),
+                          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(
+                              color: Color(0xFF0041C7),
+                              width: 2,
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 2,
+                                blurRadius: 5,
+                                offset: Offset(0, 3), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          child: Text(
+                            'KHMER SALAD',
+                            style: TextStyle(
+                              color: Color(0xFF0041C7),
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              FoodCard(
+                                imagePath: 'images/food1.jpg', // replace with your image path
+                                label: 'នំបញ្ចុកសម្លប្រហុក',
+                              ),
+                              FoodCard(
+                                imagePath: 'images/food2.jpg', // replace with your image path
+                                label: 'ញ៉ាំស្កៃ',
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              FoodCard(
+                                imagePath: 'images/food3.jpg', // replace with your image path
+                                label: 'អាម៉ុកត្រី',
+                              ),
+                              FoodCard(
+                                imagePath: 'images/food4.jpg', // replace with your image path
+                                label: 'ត្រីអាំងទឹកត្រីស្វាយ',
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              FoodCard(
+                                imagePath: 'images/food5.jpg', // replace with your image path
+                                label: 'នំបញ្ចុកទឹកត្រីផ្អែម',
+                              ),
+                              FoodCard(
+                                imagePath: 'images/food6.jpg', // replace with your image path
+                                label: 'នំបញ្ចុកសម្លរខ្មែរ',
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.only(bottom: 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              FoodCard(
+                                imagePath: 'images/food1.jpg', // replace with your image path
+                                label: 'នំបញ្ចុកសម្លប្រហុក',
+                              ),
+                              FoodCard(
+                                imagePath: 'images/food2.jpg', // replace with your image path
+                                label: 'ញ៉ាំស្កៃ',
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+//import 'package:project_mobile_app/Views/forgotpwpage.dart';
+import 'package:project_mobile_app/Views/loginpage_kh.dart';
 import 'package:project_mobile_app/Views/loginpage.dart';
+//import 'package:project_mobile_app/Views/otpscreen.dart';
 
 class Languagepage extends StatefulWidget {
   const Languagepage({super.key});
@@ -20,23 +23,38 @@ class _LanguagepageState extends State<Languagepage> {
               onTap: () {
                 Navigator.pushNamed(context, '/languagepage');
               },
-              child: const Image(
-                image: AssetImage('images/logo/kroya.png'),
+              child: Center (
+                child: const Image(
+                  height: 350,
+                  image: AssetImage('images/logo/kroya.png'),
+                ),
               ),
             ),
             Container(
               padding: const EdgeInsets.all(10),
-              child: const Column(
-                children: [
-                  Text(
-                    'Please choose a language',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+              child: Center (
+                child: const Column(
+                  children: [
+                    Text(
+                      'សូមជ្រើសរើសភាសា!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'Battambang',
+                      ),
                     ),
-                  )
-                ],
+                    Text(
+                      'Please choose a language!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'Khmer',
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Padding(
@@ -45,7 +63,7 @@ class _LanguagepageState extends State<Languagepage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()),
+                    MaterialPageRoute(builder: (context) => const KhLoginPage()),
                   );
                 },
                 style: ElevatedButton.styleFrom(

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FoodOrder extends StatefulWidget {
-  const FoodOrder({super.key});
+class FoodDelivery extends StatefulWidget {
+  const FoodDelivery({super.key});
 
   @override
-  State<FoodOrder> createState() => _FoodOrderState();
+  State<FoodDelivery> createState() => _FoodDeliveryState();
 }
 
-class _FoodOrderState extends State<FoodOrder> {
+class _FoodDeliveryState extends State<FoodDelivery> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class _FoodOrderState extends State<FoodOrder> {
           color: const Color(0xFF0041C7),
           iconSize: 40,
           onPressed: () {
-            Navigator.pushNamed(context, '/foodoption');
+            Navigator.pushNamed(context, '/foodorder');
           },
         ),
         title: const Text(
